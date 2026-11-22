@@ -122,7 +122,7 @@ appBarTheme: AppBarTheme(
 
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
-          backgroundColor: AppColors.primary,
+          backgroundColor: AppColors.accent,
           foregroundColor: Colors.white,
           elevation: 0,
           shape: RoundedRectangleBorder(
