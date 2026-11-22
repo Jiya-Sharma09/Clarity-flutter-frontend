@@ -110,6 +110,7 @@ class _NoteChatScreenState extends State<NoteChatScreen> {
       appBar: AppBar(
         title: const Text('Ask AI'),
         backgroundColor: Theme.of(context).colorScheme.primary,
+        foregroundColor: Theme.of(context).colorScheme.onPrimary,
       ),
 
       body: Column(

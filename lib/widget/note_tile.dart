@@ -42,6 +42,10 @@ class NoteTile extends StatelessWidget {
                 decoration: BoxDecoration(
                   color: colorScheme.primary.withValues(alpha: 0.12),
                   borderRadius: BorderRadius.circular(10),
+                  border: Border.all(
+                    color: colorScheme.primary.withValues(alpha: 0.24),
+                    width: 1,
+                  ),
                 ),
                 child: Icon(Icons.description_outlined, color: colorScheme.primary),
               ),

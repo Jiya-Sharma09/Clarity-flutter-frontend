@@ -65,7 +65,7 @@ class _SearchNotesScreenState extends State<SearchNotesScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Results for "${widget.query}"'),
-        backgroundColor: Theme.of(context).colorScheme.primaryContainer,
+        backgroundColor: Theme.of(context).colorScheme.primary,
       ),
       body: _buildBody(),
     );

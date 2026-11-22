@@ -84,8 +84,13 @@ class _RevQuestionsScreenState extends State<RevQuestionsScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Revision Questions'),
-      backgroundColor: Theme.of(context).primaryColor,),
+      
+      appBar: AppBar(
+              title: const Text('Revision Questions'),
+              backgroundColor: Theme.of(context).colorScheme.primary,
+              foregroundColor: Theme.of(context).colorScheme.onPrimary,
+            ),
+    
       body: FutureBuilder<List<RevisionQuestion>>(
         future: _questionsFuture,
         builder: (context, snapshot) {
