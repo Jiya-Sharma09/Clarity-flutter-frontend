@@ -20,7 +20,7 @@ class NewNoteBanner extends StatelessWidget {
         ),
       ),
       child: Padding(
-        padding: const EdgeInsets.all(15),
+        padding: const EdgeInsets.all(18),
         child: Align(
           alignment: Alignment.bottomLeft,
           child: ElevatedButton.icon(

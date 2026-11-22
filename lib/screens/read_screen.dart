@@ -96,12 +96,12 @@ class ReadScreen extends StatelessWidget {
                   decoration: BoxDecoration(
                     color: Theme.of(
                       context,
-                    ).colorScheme.primaryContainer.withOpacity(0.4),
+                    ).colorScheme.primaryContainer.withOpacity(0.6),
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: Icon(
                     Icons.description_outlined,
-                    color: Theme.of(context).colorScheme.primary,
+                    // color: Theme.of(context).colorScheme.primary,
                   ),
                 ),
                 const SizedBox(width: 14),

@@ -103,7 +103,11 @@ class _HomeScreenState extends State<HomeScreen> {
   ],
 ),
 
-      body: SingleChildScrollView(
+      body: Column(
+        children:[
+      Expanded
+      (
+        child: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.fromLTRB(20, 12, 20, 20),
           child: Column(
@@ -182,7 +186,16 @@ class _HomeScreenState extends State<HomeScreen> {
                       },
                     ),
 
-                    ElevatedButton.icon(
+                    
+            ],
+          ),
+        ),
+      ),
+      ),
+      //
+      Padding(
+        padding: EdgeInsetsGeometry.all(8),
+        child:ElevatedButton.icon(
                 onPressed: () {
                   Navigator.push(
                     context,
@@ -193,11 +206,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 },
                 icon: const Icon(Icons.auto_awesome),
                 label: const Text('Workspace AI'),
-              )
-            ],
-          ),
-        ),
-      ),
+              ))
+              ]
+      )
     );
   }
 }
