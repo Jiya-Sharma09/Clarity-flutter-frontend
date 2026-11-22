@@ -15,7 +15,7 @@ class NewNoteBanner extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
         image: const DecorationImage(
-          image: AssetImage("assets/images/notes_banner.png"),
+          image: AssetImage("assets/images/notes_banner_new_theme.png"),
           fit: BoxFit.cover,
         ),
       ),

@@ -69,33 +69,40 @@ class _HomeScreenState extends State<HomeScreen> {
 
     return Scaffold(
       appBar: AppBar(
-      title: Text(
-        "Hi, ${_authProvider.userName} 👋",
-        style: TextStyle(
-          fontWeight: FontWeight.w600,
-          color: Theme.of(context).colorScheme.onPrimaryContainer,
-        ),
-      ),
-      backgroundColor: Theme.of(context).colorScheme.primaryContainer,
-      actions: [
-        IconButton(
-  icon: Icon(
-    Theme.of(context).brightness == Brightness.dark
-        ? Icons.light_mode_outlined
-        : Icons.dark_mode_outlined,
-  ),
-  onPressed: () {
-    final themeProvider = context.read<ThemeProvider>();
-    final isDark = Theme.of(context).brightness == Brightness.dark;
-    themeProvider.setThemeMode(isDark ? ThemeMode.light : ThemeMode.dark);
-  },
-),
-IconButton(
-  icon: const Icon(Icons.logout),
-  onPressed: () => _confirmLogout(context, _authProvider),
-),
-      ],
+  title: Text(
+    "Hi, ${_authProvider.userName} 👋",
+    style: TextStyle(
+      fontWeight: FontWeight.w600,
+      color: Theme.of(context).colorScheme.onPrimary,
     ),
+  ),
+  backgroundColor: Theme.of(context).colorScheme.secondary,
+  foregroundColor: Theme.of(context).colorScheme.onPrimary,
+  elevation: 0,
+  actions: [
+    IconButton(
+      icon: Icon(
+        Theme.of(context).brightness == Brightness.dark
+            ? Icons.light_mode_outlined
+            : Icons.dark_mode_outlined,
+      ),
+      onPressed: () {
+        final themeProvider = context.read<ThemeProvider>();
+        final isDark =
+            Theme.of(context).brightness == Brightness.dark;
+
+        themeProvider.setThemeMode(
+          isDark ? ThemeMode.light : ThemeMode.dark,
+        );
+      },
+    ),
+    IconButton(
+      icon: const Icon(Icons.logout),
+      onPressed: () => _confirmLogout(context, _authProvider),
+    ),
+  ],
+),
+
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.fromLTRB(20, 12, 20, 20),
